@@ -37,3 +37,12 @@ Figs/zcloudsvsRHp.png
 Fortran/wLS.f90
 Figs/wLSz.png
 Figs/wtotz.png
+NetCDF/rceiso_moovie_rceiso01_3D_jour23.nc
+NetCDF/rceiso_moovie_rceiso01_3D_jour24.nc
+NetCDF/rceiso_moovie_rceiso01_3D_jour26.nc
+.gitignore
+.gitignore
+NetCDF/rceiso_moovie_rceiso01_3D_jour25.nc
+NetCDF/rceiso_moovie_rceiso01_3D_jour29.nc
+.gitignore
+NetCDF/rceiso_moovie_rceiso01_3D_jour27.nc

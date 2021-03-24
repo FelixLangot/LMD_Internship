@@ -1,3 +1,6 @@
+import numpy as np
+from numba import njit, jit
+
 @njit
 def Zparcel(Z):
     i = 0

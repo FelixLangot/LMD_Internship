@@ -22,15 +22,13 @@ def LSA(T, X, Y, Z, QI, QC, QSAT):
     for time in np.arange(len(T)):
         for i in np.arange(len(X)):
             for j in np.arange(len(Y)):
-                cond = QC[time, Zparcel(Z)[0]:, j, i] + \
-                    QI[time, Zparcel(Z)[0]:, j, i]
+                cond = QC[time, Zparcel(Z)[0]:, j, i] + QI[time, Zparcel(Z)[0]:, j, i]
                 if np.max(cond) - thresh >= 0:
                     toto = np.where(cond-thresh >= 0)
                     (matrix,) = toto
                     zclouds[time, i, j] = Z[Zparcel(Z)[0]+np.min(matrix)]
                     izclouds[time, i, j] = int(Zparcel(Z)[0]+np.min(matrix))
-                    qsatzclouds[time, i, j] = QSAT[time,
-                                                   Zparcel(Z)[0]+np.min(matrix), j, i]
+                    qsatzclouds[time, i, j] = QSAT[time,Zparcel(Z)[0]+np.min(matrix), j, i]
                     if qsatzclouds[time, i, j] > 100:
                         qsatzclouds[time, i, j] = qsatzclouds[time, i, j]/1000
                 else:

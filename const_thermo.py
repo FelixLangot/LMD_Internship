@@ -21,7 +21,7 @@
     #   parameter (lvap0=2.5104E6) ! J/kg, from SAM
     #   parameter (Lfusion=lsub - lvap0) ! J/kg, from SAM
 
-##############################################################
+####################### PYTHON ############################
 
 Cpd = 1005.7 # J/kg/K      
 Cpv = 1870
@@ -34,6 +34,7 @@ g = 9.8
 Rowl = 1000
 Eps = Rd/Rv
 degK = 273.15
-lsub = 2.844e6       # J/kg, from SAM
-lvap0 = 2.5104e6     # J/kg, from SAM
-Lfusion = lsub - lvap0 # J/kg, from SAM
+lsub = 2.844e6           # J/kg, from SAM
+lvap0 = 2.5104e6         # J/kg, from SAM
+Lfusion = lsub - lvap0   # J/kg, from SAM
+

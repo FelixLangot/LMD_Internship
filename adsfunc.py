@@ -83,21 +83,31 @@ def MWENV(T, X, Y, Z, W, QC, QI):
                         Wenv[time, k, j, i] = np.nan
     return Wenv
 
+#%%
+from const_thermo import *
+
+print(degK)
+#%%
+SST = 30
+pp = 1000
+pvzero = 100
+H = 10
+pmax = 500
 
 def WLS(NZ, P, PMAX, OMEGAMAX):
     vmaxu = OMEGAMAX/86400*100.0
     pvmaxu = PMAX*100.0
-    p1u = p1*100.0
+    ppu = pp*100.0
     pvzerou = pvzero*100.0
     omeLS = np.zeros((NZ))
     wLS = np.zeros((NZ))
     for i in np.arange(NZ):
         plevu = P[i]*100
-        xm = p1u - pvmaxu
-        xtw = p1u - pvzerou
+        xm = ppu - pvmaxu
+        xtw = ppu - pvzerou
         Asb = -vmaxu*(3.*xm-2.*xtw)/(xm*(xtw-xm)**2)
         Bsb = -vmaxu*(xtw-2.*xm)/(xm*xm*(xtw-xm)**2)
-        xsb = p1u-plevu
+        xsb = ppu-plevu
         omeu = (xtw-xsb)*(Asb*xsb+Bsb*xsb*xsb)
 
         if plevu < pvzerou:
@@ -105,7 +115,7 @@ def WLS(NZ, P, PMAX, OMEGAMAX):
         if omeu*OMEGAMAX < 0:
             omeu = 0
 
-        ratio = (plevu+1e-10)/p1u
+        ratio = (plevu+1e-10)/ppu
         zloc = -H*np.log(ratio)
         T = SST+degK-7.0*zloc/1000.0
         rho = plevu/Rd/T

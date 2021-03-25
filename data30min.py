@@ -1,16 +1,16 @@
 import numpy as np
 from netCDF4 import Dataset
 
-data = Dataset('NetCDF/rceiso_moovie_rceiso01_3D_jour23.nc')
-data2 = Dataset('NetCDF/rceiso_moovie_rceiso01_3D_jour24.nc')
-data3 = Dataset('NetCDF/rceiso_moovie_rceiso01_3D_jour25.nc')
-data4 = Dataset('NetCDF/rceiso_moovie_rceiso01_3D_jour26.nc')
-data5 = Dataset('NetCDF/rceiso_moovie_rceiso01_3D_jour27.nc')
-data6 = Dataset('NetCDF/rceiso_moovie_rceiso01_3D_jour28.nc')
-data7 = Dataset('NetCDF/rceiso_moovie_rceiso01_3D_jour29.nc')
-data8 = Dataset('NetCDF/rceiso_moovie_rceiso01_3D_jour30.nc')
-data9 = Dataset('NetCDF/rceiso_moovie_rceiso01_3D_jour31.nc')
-data10 = Dataset('NetCDF/rceiso_moovie_rceiso01_3D_jour32.nc')
+data = Dataset('NetCDF/rceiso_moovie_rceiso01_64_jour23.nc')
+data2 = Dataset('NetCDF/rceiso_moovie_rceiso01_64_jour24.nc')
+data3 = Dataset('NetCDF/rceiso_moovie_rceiso01_64_jour25.nc')
+data4 = Dataset('NetCDF/rceiso_moovie_rceiso01_64_jour26.nc')
+data5 = Dataset('NetCDF/rceiso_moovie_rceiso01_64_jour27.nc')
+data6 = Dataset('NetCDF/rceiso_moovie_rceiso01_64_jour28.nc')
+data7 = Dataset('NetCDF/rceiso_moovie_rceiso01_64_jour29.nc')
+data8 = Dataset('NetCDF/rceiso_moovie_rceiso01_64_jour30.nc')
+data9 = Dataset('NetCDF/rceiso_moovie_rceiso01_64_jour31.nc')
+data10 = Dataset('NetCDF/rceiso_moovie_rceiso01_64_jour32.nc')
 print("data:")
 for d in data.variables:
     print(d, data.variables[d].dimensions, data.variables[d].shape)
@@ -108,6 +108,17 @@ t = t-23
 for i in np.arange(2, 11):
     locals()['t'+str(i)] = locals()['t'+str(i)] - 23
 
+w = data.variables['W'][:]
+w2 = data2.variables['W'][:]
+w3 = data3.variables['W'][:]
+w4 = data4.variables['W'][:]
+w5 = data5.variables['W'][:]
+w6 = data6.variables['W'][:]
+w7 = data7.variables['W'][:]
+w8 = data8.variables['W'][:]
+w9 = data9.variables['W'][:]
+w10 = data10.variables['W'][:]
+
 p = data.variables['p'][:]
 p2 = data2.variables['p'][:]
 p3 = data3.variables['p'][:]
@@ -130,10 +141,14 @@ for i in np.arange(2, 11):
 omegamaxlist = []
 omegamax = 0
 omegamaxlist.append(omegamax)
-for i in np.arange(2, 11):
-    if i % 2 == 0:
-        locals()["omegamax" + str(i)] = -60
-        omegamaxlist.append(locals()["omegamax" + str(i)])
-    else:
-        locals()["omegamax" + str(i)] = 0
-        omegamaxlist.append(locals()["omegamax" + str(i)])
+for i in np.arange(2,11):
+    locals()["omegamax" + str(i)] = 0
+    omegamaxlist.append(locals()["omegamax" + str(i)])
+
+# for i in np.arange(2, 11):
+#     if i % 2 == 0:
+#         locals()["omegamax" + str(i)] = -60
+#         omegamaxlist.append(locals()["omegamax" + str(i)])
+#     else:
+#         locals()["omegamax" + str(i)] = 0
+#         omegamaxlist.append(locals()["omegamax" + str(i)])

@@ -60,3 +60,5 @@ NetCDF/rceiso_moovie_rceiso01_64_jour26.nc
 NetCDF/rceiso_moovie_rceiso01_64_jour25.nc
 __pycache__/const_thermo.cpython-38.pyc
 __pycache__/RH_Trop.cpython-38.pyc
+Figs/zmax.drawio
+Figs2/zmax.svg

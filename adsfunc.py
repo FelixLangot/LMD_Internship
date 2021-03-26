@@ -83,11 +83,9 @@ def MWENV(T, X, Y, Z, W, QC, QI):
                         Wenv[time, k, j, i] = np.nan
     return Wenv
 
-#%%
+
 from const_thermo import *
 
-print(degK)
-#%%
 SST = 30
 pp = 1000
 pvzero = 100

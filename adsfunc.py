@@ -12,6 +12,8 @@ def Zparcel(Z):
         i += 1
     return iZparcel, Zparcel
 
+
+@njit
 def Zloc(Z,loc):
     i = 0
     while Z[i] <= max(Z):

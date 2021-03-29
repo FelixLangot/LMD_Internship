@@ -12,6 +12,15 @@ def Zparcel(Z):
         i += 1
     return iZparcel, Zparcel
 
+def Zloc(Z,loc):
+    i = 0
+    while Z[i] <= max(Z):
+        if Z[i] >= loc:
+            Zloc = Z[i]
+            iZloc = i
+            break
+        i += 1
+    return iZloc, Zloc
 
 @njit
 def LSA(T, X, Y, Z, QI, QC, QSAT):

@@ -17,6 +17,8 @@ for d in data.variables:
     print(d, data.variables[d].dimensions, data.variables[d].shape)
 #%% 
 
+print(1/13*100, '%')
+
 qc = data.variables['QC'][:]
 qi = data.variables['QI'][:]
 qsat = data.variables['QSAT'][:]
@@ -25,6 +27,8 @@ x = np.asarray(data.variables['x'][:])
 y = np.asarray(data.variables['y'][:])
 z = np.asarray(data.variables['z'][:])
 t = data.variables['time'][:]
+
+print(2/13*100, '%')
 
 qc2 = data2.variables['QC'][:]
 qi2 = data2.variables['QI'][:]
@@ -35,6 +39,8 @@ qv2 = data2.variables['QV'][:]
 # z2 = np.asarray(data2.variables['z'][:])
 t2 = data2.variables['time'][:]
 
+print(3/13*100, '%')
+
 qc3 = data3.variables['QC'][:]
 qi3 = data3.variables['QI'][:]
 qsat3 = data3.variables['QSAT'][:]
@@ -43,6 +49,8 @@ qv3 = data3.variables['QV'][:]
 # y3 = np.asarray(data3.variables['y'][:])
 # z3 = np.asarray(data3.variables['z'][:])
 t3 = data3.variables['time'][:]
+
+print(4/13*100, '%')
 
 qc4 = data4.variables['QC'][:]
 qi4 = data4.variables['QI'][:]
@@ -53,6 +61,8 @@ qv4 = data4.variables['QV'][:]
 # z4 = np.asarray(data4.variables['z'][:])
 t4 = data4.variables['time'][:]
 
+print(5/13*100, '%')
+
 qc5 = data5.variables['QC'][:]
 qi5 = data5.variables['QI'][:]
 qsat5 = data5.variables['QSAT'][:]
@@ -61,6 +71,8 @@ qv5 = data5.variables['QV'][:]
 # y5 = np.asarray(data5.variables['y'][:])
 # z5 = np.asarray(data5.variables['z'][:])
 t5 = data5.variables['time'][:]
+
+print(6/13*100, '%')
 
 qc6 = data6.variables['QC'][:]
 qi6 = data6.variables['QI'][:]
@@ -71,6 +83,8 @@ qv6 = data6.variables['QV'][:]
 # z6 = np.asarray(data6.variables['z'][:])
 t6 = data6.variables['time'][:]
 
+print(7/13*100, '%')
+
 qc7 = data7.variables['QC'][:]
 qi7 = data7.variables['QI'][:]
 qsat7 = data7.variables['QSAT'][:]
@@ -79,6 +93,8 @@ qv7 = data7.variables['QV'][:]
 # y7 = np.asarray(data7.variables['y'][:])
 # z7 = np.asarray(data7.variables['z'][:])
 t7 = data7.variables['time'][:]
+
+print(8/13*100, '%')
 
 qc8 = data8.variables['QC'][:]
 qi8 = data8.variables['QI'][:]
@@ -89,6 +105,8 @@ qv8 = data8.variables['QV'][:]
 # z8 = np.asarray(data8.variables['z'][:])
 t8 = data8.variables['time'][:]
 
+print(9/13*100, '%')
+
 qc9 = data9.variables['QC'][:]
 qi9 = data9.variables['QI'][:]
 qsat9 = data9.variables['QSAT'][:]
@@ -97,6 +115,8 @@ qv9 = data9.variables['QV'][:]
 # y9 = np.asarray(data9.variables['y'][:])
 # z9 = np.asarray(data9.variables['z'][:])
 t9 = data9.variables['time'][:]
+
+print(10/13*100, '%')
 
 qc10 = data10.variables['QC'][:]
 qi10 = data10.variables['QI'][:]
@@ -111,6 +131,8 @@ t = t-40
 for i in np.arange(2, 11):
     locals()['t'+str(i)] = locals()['t'+str(i)] - 40
 
+print(11/13*100, '%')
+
 w = data.variables['W'][:]
 w2 = data2.variables['W'][:]
 w3 = data3.variables['W'][:]
@@ -121,6 +143,8 @@ w7 = data7.variables['W'][:]
 w8 = data8.variables['W'][:]
 w9 = data9.variables['W'][:]
 w10 = data10.variables['W'][:]
+
+print(12/13*100, '%')
 
 p = data.variables['p'][:]
 p2 = data2.variables['p'][:]
@@ -155,3 +179,5 @@ for i in np.arange(2, 11):
 #     else:
 #         locals()["omegamax" + str(i)] = 0
 #         omegamaxlist.append(locals()["omegamax" + str(i)])
+
+print(13/13*100, '%')

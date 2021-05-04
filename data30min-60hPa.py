@@ -30,7 +30,7 @@ print("data:")
 for d in data.variables:
     print(d, data.variables[d].dimensions, data.variables[d].shape)
 
-print('Setting up variables')
+print('Setting up variables:')
 print(1/13*100, '%')
 
 qc = data.variables['QC'][:]
@@ -143,7 +143,7 @@ t10 = data10.variables['time'][:]
 
 t = t-23
 
-nsamples = 9
+nsamples = 10
 
 for i in np.arange(2, nsamples+1):
     locals()['t'+str(i)] = locals()['t'+str(i)] - 23

@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage[legalpaper, margin=2.5cm]{geometry}
+\begin{document}
+\begin{list}{}{}
+    \item Soient $RH_{dyn}^1$ et $RH_{dyn}^2$ la RH prédite par l'appoche dynamique pour les simulations 1 et 2. \\
+    \item Soit $RH_{dyn}^2(w_1)$ la RH prédite par l'appoche dynamique pour la simulation 2 mais avec wtot(z) de la simulation 1. \\
+    \item Soient $RH_{stat}^1$ et $RH_{stat}^2$ la RH prédite par l'approche statique pour les simulations 1 et 2. 
+\end{list}
+
+Alors
+~\\
+~\\
+\begin{eqnarray*}
+    & RH_{dyn}^2-RH_{dyn}^1 &= RH_{stat}^2-RH_{stat}^1 + RH_{dyn}^2-RH_{dyn}^2(w_1) + RH_{dyn}^2(w_1)-RH_{dyn}^1-RH_{stat}^2+RH_{stat}^1 \\ \Leftrightarrow
+    &\Delta RH_{dyn} &= \Delta RH_{stat} + RH_{dyn}^2-RH_{dyn}^2(w_1) + RH_{dyn}^2(w_1)-RH_{dyn}^1-\Delta RH_{stat} \\ \Leftrightarrow
+    &\Delta RH_{dyn} &= \Delta RH_{stat} + RH_{dyn}^2-RH_{dyn}^2(w_1) + RH_{dyn}^2(w_1)-RH_{dyn}^1-\Delta RH_{stat}
+\end{eqnarray*}
+~\\
+~\\
+avec $\Delta RH_{dyn} = RH_{dyn}^2-RH_{dyn}^1, \Delta RH_{stat} = RH_{stat}^2-RH_{stat}^1$
+
+$\bar{ABC}$ vs $\overline{ABC}$
+
+\end{document}

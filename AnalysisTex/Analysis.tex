@@ -1,24 +1,61 @@
 \documentclass{article}
 \usepackage[legalpaper, margin=2.5cm]{geometry}
+\usepackage[]{amsmath}
 \begin{document}
 \begin{list}{}{}
-    \item Soient $RH_{dyn}^1$ et $RH_{dyn}^2$ la RH prédite par l'appoche dynamique pour les simulations 1 et 2. \\
-    \item Soit $RH_{dyn}^2(w_1)$ la RH prédite par l'appoche dynamique pour la simulation 2 mais avec wtot(z) de la simulation 1. \\
+    \item Soient $RH_{dyn}^1$ et $RH_{dyn}^2$ la RH prédite par l'appoche dynamique pour les simulations 1 et 2. 
+    \item Soit $RH_{dyn}^2(w_1)$ la RH prédite par l'appoche dynamique pour la simulation 2 mais avec $w_1 = w_{tot}(z)$ de la simulation 1. 
     \item Soient $RH_{stat}^1$ et $RH_{stat}^2$ la RH prédite par l'approche statique pour les simulations 1 et 2. 
 \end{list}
 
 Alors
 ~\\
+\begin{align}
+    RH_{dyn}^2-RH_{dyn}^1 &= RH_{stat}^2-RH_{stat}^1 \\
+   &+ RH_{dyn}^2-RH_{dyn}^2(w_1) \\ 
+   &+ RH_{dyn}^2(w_1)-RH_{dyn}^1-RH_{stat}^2+RH_{stat}^1 
+\end{align}
 ~\\
-\begin{eqnarray*}
-    & RH_{dyn}^2-RH_{dyn}^1 &= RH_{stat}^2-RH_{stat}^1 + RH_{dyn}^2-RH_{dyn}^2(w_1) + RH_{dyn}^2(w_1)-RH_{dyn}^1-RH_{stat}^2+RH_{stat}^1 \\ \Leftrightarrow
-    &\Delta RH_{dyn} &= \Delta RH_{stat} + RH_{dyn}^2-RH_{dyn}^2(w_1) + RH_{dyn}^2(w_1)-RH_{dyn}^1-\Delta RH_{stat} \\ \Leftrightarrow
-    &\Delta RH_{dyn} &= \Delta RH_{stat} + RH_{dyn}^2-RH_{dyn}^2(w_1) + RH_{dyn}^2(w_1)-RH_{dyn}^1-\Delta RH_{stat}
-\end{eqnarray*}
-~\\
-~\\
-avec $\Delta RH_{dyn} = RH_{dyn}^2-RH_{dyn}^1, \Delta RH_{stat} = RH_{stat}^2-RH_{stat}^1$
+Ainsi, la différence de RH prédite est décomposée en 3 termes:\\ 
+(1) effet de la cohérence verticale des nuages, \\
+(2) effet de wtot(z), \\ 
+(3) effet de la cohérence temporelle des nuages.\\ ~\\
+\textit{L'idéal serait d'arriver à dire, par exemple (chiffres au pif), que la sécheresse de la simulation cyclone par rapport aux cumulonimbus isolés s'explique à 20\% par les nuages plus cohérents verticalement, à 60\% par les nuages plus cohérents temporellement, et à 20\% par l'environnement qui subside plus vite.} \\
 
-$\bar{ABC}$ vs $\overline{ABC}$
+Simulations à comparer:
+
+\begin{list}{}{}
+    \item 1. Cumulonimbus vs Cumulonimbus + U 
+    \item 2. Cyclone vs Cyclone + U ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\hbox{
+        $\left.\begin{array}{lcl}
+            ~ \\
+            ~\\
+            ~ \\
+          \end{array}\right\}\begin{array}{lcl}
+           \text{Comparaison avec/sans ascendance}
+         \end{array}$}
+    \item 3. Squall line vs Squall line + U
+    \item ~\\
+    \item 4. Cumulonimbus vs Cyclone
+    \item 5. Cumulonimbus vs Squall line     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\hbox{
+        $\left.\begin{array}{lcl}
+            ~ \\
+            ~\\
+            ~ \\
+          \end{array}\right\}\begin{array}{lcl}
+           \text{Comparaison entre organisations}
+         \end{array}$}
+    \item 6. Cyclone vs Squall line
+\end{list}
+~\\
+$RH$ à calculer:
+\begin{list}{}{}
+    \item 1. $RH_{dyn}^{Cumu+U}(w_{Cumu})$
+    \item 2. $RH_{dyn}^{Cyc+U}(w_{Cyc})$
+    \item 3. $RH_{dyn}^{Sqll+U}(w_{Sqll})$
+    \item 4. $RH_{dyn}^{Cyc}(w_{Cumu})$
+    \item 5. $RH_{dyn}^{Sqll}(w_{Cumu})$
+    \item 6. $RH_{dyn}^{Sqll}(w_{Cyc})$
+\end{list}
 
 \end{document}

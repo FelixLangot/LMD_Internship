@@ -28,7 +28,7 @@ Csprop = fm.FontProperties(fname=fpath)
 Cstitleprop = Csprop.copy()
 Cslabelprop = Csprop.copy()
 Cstitleprop.set_size(30)
-Csprop.set_size(25)
+Csprop.set_size(15)
 Cslabelprop.set_size(25)
 
 fpath2 = os.path.join(

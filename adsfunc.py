@@ -158,12 +158,12 @@ def ZTRAJ(TIME, W, NOBS, Z, Dt):
     return Ztrajlist
 
 
-def ZTRAJBINHIST(Ztraj,Z):
+def ZTRAJBINHIST(Ztraj,Z, ZbinL, ZbinH):
     Ztrajbinlist = np.zeros(len(Ztraj), dtype=np.ndarray)
     Ztrajhistlist = np.zeros(len(Ztraj), dtype=np.ndarray)
     for i in np.arange(len(Ztrajbinlist)):
         Ztrajbinlist[i] = np.zeros(len(Ztraj[i]))
-        Ztrajhistlist[i] = np.histogram(Ztraj[i], bins=Z[24:52])
+        Ztrajhistlist[i] = np.histogram(Ztraj[i], bins=Z[ZbinL:ZbinH])
         a = 0
         b = 0
         for j in np.arange(len(Ztrajhistlist[i][0])):

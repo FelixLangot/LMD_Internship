@@ -2,7 +2,7 @@ import adsfunc as ads
 import scipy.stats as sp
 from netCDF4 import Dataset
 import matplotlib as mpl
-import matplotlib.colors
+import matplotlib.colors as colors
 from matplotlib import font_manager as fm, rcParams
 import matplotlib.pyplot as plt
 import os

@@ -219,3 +219,4 @@ RHarrays/RHp_dt10_1_2.txt
 *.pdf
 *.synctex.gz
 *.xdv
+*.npy

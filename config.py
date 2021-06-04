@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import os
 from numba import njit, jit
 import numpy as np
+import sklearn.metrics
 from tqdm.notebook import tqdm as tqdmn  # progress bar
 import jax.numpy as jnp
 
@@ -20,7 +21,6 @@ mpl.rcParams['xtick.major.width'] = 0.3
 mpl.rcParams['xtick.minor.width'] = 0.3
 mpl.rcParams['ytick.major.width'] = 0.3
 mpl.rcParams['ytick.minor.width'] = 0.3
-
 
 fpath = os.path.join(
     rcParams["datapath"], "/Users/felixlangot/Library/Fonts/Cronos-Pro-Light_12448.ttf")

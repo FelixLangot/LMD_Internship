@@ -9,6 +9,7 @@ import os
 from numba import njit, jit
 import numpy as np
 import sklearn.metrics
+import scipy.stats as scpstats
 from tqdm.notebook import tqdm as tqdmn  # progress bar
 import jax.numpy as jnp
 
@@ -37,7 +38,7 @@ Mpprop = fm.FontProperties(fname=fpath2)
 Mptitleprop = Mpprop.copy()
 Mplabelprop = Mpprop.copy()
 Mptitleprop.set_size(30)
-Mpprop.set_size(25)
+Mpprop.set_size(20)
 Mplabelprop.set_size(15)
 
 fpath3 = os.path.join(

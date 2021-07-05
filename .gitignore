@@ -222,3 +222,4 @@ RHarrays/RHp_dt10_1_2.txt
 *.npy
 NetCDF/altitude_dernière_sat data/Archive.zip
 NetCDF/altitude_dernière_sat data/SAMUW_rceiso_96km_30C_750m_3Dmphyfull.nc.zip
+*.zip
